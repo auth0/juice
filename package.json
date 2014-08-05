@@ -28,12 +28,12 @@
     "node": ">=0.8.0"
   },
   "dependencies": {
+    "batch": "~0.3.2",
+    "commander": "~1.1.1",
     "cssom": "~0.2.5",
     "jsdom": "~0.6.0",
-    "batch": "~0.3.2",
-    "superagent": "~0.14.0",
-    "commander": "~1.1.1",
-    "slick": "~1.10.0"
+    "slick": "^1.12.1",
+    "superagent": "~0.14.0"
   },
   "devDependencies": {
     "should": "~1.2.2",
