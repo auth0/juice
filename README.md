@@ -121,6 +121,41 @@ provided css is inlined. It does not look at `<style>` or
 
 Array of ignored pseudo-selectors such as 'hover' and 'active'.
 
+### Global settings
+
+#### juice.codeBlocks
+
+An object where each value has a `start` and `end` to specify fenced code blocks that should be ignored during parsing and inlining. For example, Handlebars (hbs) templates are `juice.codeBlocks.HBS = {start: '{{', end: '}}'}`. `codeBlocks` can fix problems where otherwise juice might interpret code like `<=` as HTML, when it is meant to be template language code. Note that `codeBlocks` is a dictionary which can contain many different code blocks, so don't do `juice.codeBlocks = {...}` do `juice.codeBlocks.myBlock = {...}`
+
+#### juice.ignoredPseudos
+
+Array of ignored pseudo-selectors such as 'hover' and 'active'.
+
+#### juice.widthElements
+
+Array of HTML elements that can receive `width` attributes.
+
+#### juice.heightElements
+
+Array of HTML elements that can receive `height` attributes.
+
+#### juice.styleToAttribute
+
+Object of style property names (key) to their respective attribute names (value).
+
+#### juice.tableElements
+
+Array of table HTML elements that can receive attributes defined in `juice.styleToAttribute`.
+
+#### juice.nonVisualElements
+
+Array of elements that will not have styles inlined because they are not intended to render.
+
+#### juiceClient.excludedProperties
+
+Array of css properties that won't be inlined.
+
+
 ## Credits
 
 (The MIT License)
